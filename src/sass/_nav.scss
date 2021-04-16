@@ -1,0 +1,79 @@
+nav {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 10px 0;
+  height: auto;
+  transition: 350ms ease-in-out;
+
+  &.show {
+    background-color: $darkBlue;
+  }
+
+  .brand-logo {
+    display: flex;
+    height: 56px;
+
+    @include breakpoint(sm) {
+      height: 64px;
+    }
+
+    img {
+      height: 50%;
+      margin: auto;
+    }
+  }
+
+  #nav {
+    a {
+      position: relative;
+      margin-left: 32px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        left: auto;
+        width: 0%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $orange;
+        transition: 300ms;
+      }
+
+      &:hover::after {
+        right: auto;
+        left: 0;
+        width: 100%;
+      }
+
+      &.active-nav::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#mobile-nav {
+  li {
+    &:first-child {
+      margin-top: 50px;
+    }
+    a {
+      position: relative;
+      &.active-nav::after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        bottom: 50%;
+        transform: translateY(50%);
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+
+        border-right: 8px solid $orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#002854" />
+
+    <meta
+      name="description"
+      content="KitaBisaKoding adalah sebuah platform belajar programming indonesia"
+    />
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="/src/assets/favicon/kitaBisaKoding.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/src/assets/favicon/kitaBisaKoding.ico"
+    />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MATERIALIZE -->
+    <link rel="stylesheet" href="/src/styles/materialize/materialize.min.css" />
+    <!-- MATERIAL ICON -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/styles/css/style.css" />
+
+    <title>KitaBisaKoding</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+              <img
+                src="/src/assets/logo/kitaBisaKoding.png"
+                alt="KitaBisaKoding"
+              />
+            </a>
+
+            <ul id="nav" class="right hide-on-med-and-down">
+              <!--  -->
+            </ul>
+            <a href="#" data-target="mobile-nav" class="right sidenav-trigger"
+              ><i class="material-icons">menu</i></a
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- SIDE NAV -->
+    <ul id="mobile-nav" class="sidenav">
+      <!--  -->
+    </ul>
+
+    <!-- CONTENT -->
+    <div id="content">
+      <!--  -->
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="copyright">
+              <p>copyright &copy; 2020 ~ KitaBisaKoding</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MATERIALIZE -->
+    <script src="/src/js/materialize/materialize.min.js"></script>
+    <!-- SCRIPT JS -->
+    <script src="/src/js/script.js"></script>
+
+    <!-- PAGES -->
+    <script src="/src/js/pages.js"></script>
+    <!-- SERVICE-WORKER -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function () {
+              console.log("Service Worker Done");
+            })
+            .catch(function () {
+              console.log("Service Worker Error");
+            });
+        });
+      } else {
+        console.log("Service Worker not available in your browser");
+      }
+    </script>
+  </body>
+</html>

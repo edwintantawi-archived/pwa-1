@@ -1,0 +1,88 @@
+.about {
+  header {
+    background-color: $darkBlue;
+    padding: 130px 0 50px;
+    color: white;
+    position: relative;
+    top: -64px;
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+      padding: 150px 0 160px;
+    }
+
+    .pattern {
+      position: absolute;
+      top: -400px;
+      right: -240px;
+      display: none;
+
+      @include breakpoint(lg) {
+        display: block;
+        right: -240px;
+        top: -300px;
+        width: 70%;
+      }
+      @include breakpoint(xl) {
+        width: 55%;
+        right: -260px;
+        top: -450px;
+      }
+    }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &__text {
+        text-align: center;
+        display: flex;
+        height: unset;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          margin: 0;
+          text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+          font-weight: 700;
+          font-size: 32px;
+
+          @include breakpoint(lg) {
+            font-size: 42px;
+          }
+          @include breakpoint(xl) {
+            font-size: 52px;
+          }
+          @include breakpoint(xxl) {
+            font-size: 62px;
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 300;
+          @include breakpoint(lg) {
+            font-size: 16px;
+          }
+          @include breakpoint(xl) {
+            font-size: 18px;
+          }
+          @include breakpoint(xxl) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  main {
+    height: 600px;
+    h2 {
+      font-size: 2rem;
+      @include breakpoint(md) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
